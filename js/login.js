@@ -7,6 +7,20 @@ const check_xss = (input) => {
     }
     return sanitizedInput;
 };
+function login_count() {
+    let loginCnt = getCookie("login_cnt") || 0; // 기존 쿠키 값 가져오기, 없으면 0으로 초기화
+    loginCnt++; // 카운트 증가
+    setCookie("login_cnt", loginCnt, 365); // 증가된 카운트를 쿠키에 저장, 365일 동안 유지
+    alert("로그인 횟수: " + loginCnt);
+}
+
+function logout_count() {
+    let logoutCnt = getCookie("logout_cnt") || 0; // 기존 쿠키 값 가져오기, 없으면 0으로 초기화
+    logoutCnt++; // 카운트 증가
+    setCookie("logout_cnt", logoutCnt, 365); // 증가된 카운트를 쿠키에 저장, 365일 동안 유지
+    alert("로그아웃 횟수: " + logoutCnt);
+}
+
 
 const check_input = () => {
     const idsave_check = document.getElementById('idSaveCheck');
@@ -53,6 +67,8 @@ const check_input = () => {
         alert('패스워드는 대소문자를 1개 이상 포함해야 합니다.');
         return false;
     }
+
+    
 
     const sanitizedPassword = check_xss(passwordValue);
     const sanitizedEmail = check_xss(emailValue);

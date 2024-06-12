@@ -19,6 +19,22 @@
             }
         }
         
+        function session_join_get() {
+            if (sessionStorage) {
+                const encryptedData = sessionStorage.getItem("Session_Storage_new_user_encryted");
+                if (encryptedData) {
+                    const decryptedData = decrypt_text(encryptedData); // 암호화된 데이터를 복호화
+                    const userData = JSON.parse(decryptedData); // JSON 문자열을 객체로 변환
+                    console.log(userData); // 복호화된 객체를 콘솔에 출력
+                } else {
+                    alert("세션 데이터가 없습니다.");
+                }
+            } else {
+                alert("세션 스토리지를 지원하지 않습니다.");
+            }
+        }
+        
+
         function session_check() { //세션 검사
             if (sessionStorage.getItem("Session_Storage_id")) {
                 alert("이미 로그인 되었습니다.");
