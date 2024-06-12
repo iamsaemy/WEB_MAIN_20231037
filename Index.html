@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-        <meta name=“author” content=“20231037”>
-        <meta name=“keywords” content=“computer”>
+        <meta name="author" content="20231037">
+        <meta name="keywords" content="computer">
         <base href="http://127.0.0.1:5500">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,107 +13,105 @@
         <script src="js/data_type.js" defer></script>
         <script src="js/search.js" defer></script>
         <script src="js/pop_up.js" defer></script>
-        </mata>
+        <script src="js/join.js" defer></script>
         <style>
             table {
-            font-size: 20pt;
-            color: white;
+                font-size: 20pt;
+                color: white;
             }
-          </style>
-          <script type="text/javascript" src="js/test.js"></script>
+        </style>
+        <script type="text/javascript" src="js/test.js"></script>
     </head>
     <body style="background-color: black;" onload="pop_up();">
 
-      <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-        <div class="container-fluid">
-
-        <nav class="navbar bg-body-tertiary">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img src="image/LOGO.png" alt="Logo" width="150" height="45" class="d-inline-block align-text-top">
-              
-            </a>
-          </div>
-        </nav>
-         
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="https://lostark.game.onstove.com/News/Notice/List/"target="_blank">새소식</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://lostark.game.onstove.com/Profile/Character" target="_blank">게임정보</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://lostark.game.onstove.com/GameGuide"target="_blank" target="_blank">가이드</a>
-              </li>
-              <li class="nav-item">   
-                <a class="nav-link" href="https://lostark.game.onstove.com/Community/Free/List"target="_blank">커뮤니티</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://lostark.game.onstove.com/Market"target="_blank">거래소</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://lostark.game.onstove.com/Video"target="_blank">미디어</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://lostark.game.onstove.com/Shop#mari"target="_blank">웹 샵</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://help.onstove.com/web/faq/serviceMain/page?game_nm=LOST_ARK&game=2017090003&channel=stove"target="_blank">고객센터</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  클래스 정보
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">슈샤이어</a></li>
-                  <li><a class="dropdown-item" href="#">데런</a></li>
-                  <li><a class="dropdown-item" href="#">실린</a></li>
-                  <li><a class="dropdown-item" href="#">아르데타인</a></li>
-                  <li><a class="dropdown-item" href="#">스페셜리스트</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <nav class="navbar bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
-              <form class="d-flex" role="search" onsubmit="return googleSearch();">
-                <input class="form-control me-2" id="search_input" name="q" type="search" placeholder="키워드 입력" aria-label="Search">
-                <button class="btn btn-outline-success" id="search_btn" type="submit">검색</button>
-                <a href="login/login.html" class="btn btn-outline-success" id="login_btn">로그인</a>
-                <input class="btn btn-primary btn-lg" onclick="join()" type="button" id="join_btn" value="회원 가입">
-              </form>
-            </div>
-          </nav>
-        </div>
-      </nav>
 
-        
-            <div style="display: flex; justify-content: center;">
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="image/LOGO.png" alt="Logo" width="150" height="45" class="d-inline-block align-text-top">
+                        </a>
+                    </div>
+                </nav>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://lostark.game.onstove.com/News/Notice/List/" target="_blank">새소식</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://lostark.game.onstove.com/Profile/Character" target="_blank">게임정보</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://lostark.game.onstove.com/GameGuide" target="_blank">가이드</a>
+                        </li>
+                        <li class="nav-item">   
+                            <a class="nav-link" href="https://lostark.game.onstove.com/Community/Free/List" target="_blank">커뮤니티</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://lostark.game.onstove.com/Market" target="_blank">거래소</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://lostark.game.onstove.com/Video" target="_blank">미디어</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://lostark.game.onstove.com/Shop#mari" target="_blank">웹 샵</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://help.onstove.com/web/faq/serviceMain/page?game_nm=LOST_ARK&game=2017090003&channel=stove" target="_blank">고객센터</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                클래스 정보
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">슈샤이어</a></li>
+                                <li><a class="dropdown-item" href="#">데런</a></li>
+                                <li><a class="dropdown-item" href="#">실린</a></li>
+                                <li><a class="dropdown-item" href="#">아르데타인</a></li>
+                                <li><a class="dropdown-item" href="#">스페셜리스트</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search" onsubmit="return googleSearch();">
+                            <input class="form-control me-2" id="search_input" name="q" type="search" placeholder="키워드 입력" aria-label="Search">
+                            <button class="btn btn-outline-success" id="search_btn" type="submit">검색</button>
+                            <a href="login/login.html" class="btn btn-outline-success" id="login_btn">로그인</a>
+                            <a href="login/join.html" class="btn btn-outline-success" id="join_btn">회원가입</a>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+
+        <div style="display: flex; justify-content: center;">
             <img src="image/main.png" class="img-fluid" width="2518" height="1219">
-            
         </div>
         <div style="display: flex; justify-content: center;">
-            <table class= "table" border="1">
-            <caption>인기 캐릭터</caption>
-            <tbody>
-                <tr bgcolor="blue">
-                    <td width="80">브레이커</td>
-                    <td>소울이터</td>
-                    <td>블레이드</td>
-                </tr>
-            <tr>
-                <td bgcolor="green"><b>도화가</b></td>
-                <td>바드</td>
-                <td>홀리나이트</td>
-                <td><font size="13">도화가</font></td>
-                <td><font size="17">도화가2</font></td>
-            </tr>
-            </tbody>
+            <table class="table" border="1">
+                <caption>인기 캐릭터</caption>
+                <tbody>
+                    <tr bgcolor="blue">
+                        <td width="50">브레이커</td>
+                        <td>소울이터</td>
+                        <td>블레이드</td>
+                        <td>소서리스</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="green"><b>도화가</b></td>
+                        <td>바드</td>
+                        <td>홀리나이트</td>
+                        <td><font size="13">도화가</font></td>
+                        <td><font size="13">워로드</font></td>
+                    </tr>
+                </tbody>
             </table>
         </div>
         <hr>
